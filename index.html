@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Mohammed Faris — Cybersecurity Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pre-box">
+    <p class="pre-line"><span class="g">$</span> initializing system<span class="blink">_</span></p>
+    <p class="pre-line"><span class="g">$</span> loading profile<span class="blink">_</span></p>
+    <p class="pre-line"><span class="g">$</span> decrypting data<span class="blink">_</span></p>
+    <div class="pre-bar"><div id="preFill"></div></div>
+    <p id="preStatus" class="g mono">0%</p>
+  </div>
+</div>
+
+<div class="scanlines"></div>
+<div id="scrollProg"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#hero"><span class="g">&gt;</span> Mohammed Faris</a>
+  <button id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+  <ul id="navList">
+    <li><a href="#hero" data-i18n="nav.home">Home</a></li>
+    <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="#achievements" data-i18n="nav.hof">Hall of Fame</a></li>
+    <li><a href="#certs" data-i18n="nav.certs">Certs</a></li>
+    <li><a href="#letters" data-i18n="nav.letters">Letters</a></li>
+    <li><a href="#accounts" data-i18n="nav.accounts">Accounts</a></li>
+    <li><a href="#arsenal" data-i18n="nav.arsenal">Arsenal</a></li>
+    <li><a href="#collaborate" data-i18n="nav.collaborate">Collaborate</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="matrix"></canvas>
+  <div class="hero-inner">
+    <div class="hero-tag"><span class="g mono">&lt;</span> <span data-i18n="hero.tag">Cybersecurity Researcher</span> <span class="g mono">/&gt;</span></div>
+    <h1 class="hero-name" id="heroName">Mohammed Faris Al-Hadhrawi</h1>
+    <div class="hero-roles"><span class="role-text" id="roleText"></span><span class="blink">|</span></div>
+    <div class="hero-divider"></div>
+    <div class="hero-stats">
+      <div class="hs-item"><span class="hs-num g" data-target="20">0</span><span class="hs-plus g">+</span><span class="hs-label" data-i18n="hero.stat1">Hall of Fame</span></div>
+      <div class="hs-sep"></div>
+      <div class="hs-item"><span class="hs-num g" data-target="50">0</span><span class="hs-plus g">+</span><span class="hs-label" data-i18n="hero.stat2">Vulnerabilities</span></div>
+      <div class="hs-sep"></div>
+      <div class="hs-item"><span class="hs-num g" data-target="10">0</span><span class="hs-plus g">+</span><span class="hs-label" data-i18n="hero.stat3">Years Exp</span></div>
+      <div class="hs-sep"></div>
+      <div class="hs-item"><span class="hs-num g">eJPT</span><span class="hs-label" data-i18n="hero.stat4">Certified</span></div>
+    </div>
+    <div class="hero-btns">
+      <a href="#achievements" class="btn-g" data-i18n-btn="hero.btn1"><i class="fas fa-trophy"></i> <span data-i18n="hero.btn1">Hall of Fame</span></a>
+    </div>
+  </div>
+  <div class="scroll-hint"><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <div class="sec-head"><span class="g mono">// </span><span data-i18n="about.head">About Me</span><span class="g mono"> _</span></div>
+    <div class="about-grid">
+      <div class="about-card terminal-card">
+        <div class="tc-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g2"></span><span class="tc-title">about.sh</span></div>
+        <div class="tc-body">
+          <p><span class="g">$</span> cat /home/mf/bio.txt</p>
+          <p class="tc-text">I am <span class="hl">Mohammed Faris Musa Al-Hadhrawi</span>, a cybersecurity specialist and penetration tester with Hall of Fame recognitions from <span class="hl">20+ global institutions</span> including NASA, DHS, FCC, and CMS.</p>
+          <p class="tc-text">Certified <span class="hl">eJPT</span> from INE Security (ID: 153981860), actively hunting vulnerabilities on Bugcrowd and HackerOne.</p>
+          <p><span class="g">$</span> cat /etc/location</p>
+          <p class="tc-text"><span class="g">→</span> Baghdad, Iraq</p>
+          <p><span class="g">$</span> cat /etc/languages</p>
+          <p class="tc-text"><span class="g">→</span> Arabic (Native) &nbsp;|&nbsp; English (Professional)</p>
+        </div>
+      </div>
+      <div class="about-right">
+        <h3 class="sub-title">// <span data-i18n="about.skills">Technical Skills</span></h3>
+        <div class="skill-list">
+          <div class="sk"><div class="sk-top"><span>Web Application Pentesting</span><span class="g mono">90%</span></div><div class="sk-bar"><div class="sk-fill" data-w="90"></div></div></div>
+          <div class="sk"><div class="sk-top"><span>Bug Bounty Hunting</span><span class="g mono">88%</span></div><div class="sk-bar"><div class="sk-fill" data-w="88"></div></div></div>
+          <div class="sk"><div class="sk-top"><span>SQL Injection</span><span class="g mono">85%</span></div><div class="sk-bar"><div class="sk-fill" data-w="85"></div></div></div>
+          <div class="sk"><div class="sk-top"><span>XSS / SSRF / CSRF</span><span class="g mono">83%</span></div><div class="sk-bar"><div class="sk-fill" data-w="83"></div></div></div>
+          <div class="sk"><div class="sk-top"><span>Server-Side Injection</span><span class="g mono">80%</span></div><div class="sk-bar"><div class="sk-fill" data-w="80"></div></div></div>
+          <div class="sk"><div class="sk-top"><span>Network Pentesting</span><span class="g mono">75%</span></div><div class="sk-bar"><div class="sk-fill" data-w="75"></div></div></div>
+        </div>
+        <h3 class="sub-title" style="margin-top:1.5rem">// <span data-i18n="about.tools">Tools</span></h3>
+        <div class="tools-wrap">
+          <span class="tool-tag"><i class="fas fa-spider"></i> Burp Suite</span>
+          <span class="tool-tag"><i class="fas fa-terminal"></i> Kali Linux</span>
+          <span class="tool-tag"><i class="fas fa-network-wired"></i> Nmap</span>
+          <span class="tool-tag"><i class="fas fa-database"></i> SQLMap</span>
+          <span class="tool-tag"><i class="fab fa-python"></i> Python</span>
+          <span class="tool-tag"><i class="fas fa-mask"></i> Metasploit</span>
+          <span class="tool-tag"><i class="fas fa-search"></i> OSINT</span>
+          <span class="tool-tag"><i class="fas fa-code"></i> Nuclei</span>
+          <span class="tool-tag"><i class="fas fa-globe"></i> Nikto</span>
+          <span class="tool-tag"><i class="fab fa-git-alt"></i> Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HALL OF FAME -->
+<section id="achievements" class="sec sec-dark">
+  <div class="wrap">
+    <div class="sec-head"><span class="g mono">// </span><span data-i18n="hof.head">Hall of Fame</span><span class="g mono"> _</span></div>
+    <p class="sec-sub" data-i18n="hof.sub">Officially recognized by global institutions for discovering security vulnerabilities</p>
+
+    <div class="cat-label"><i class="fas fa-flag-usa"></i> <span data-i18n="hof.cat1">U.S. Government Agencies</span></div>
+    <div class="hof-grid">
+      <a class="hof-card" href="https://www.nasa.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-rocket"></i></div><div class="hof-name">NASA</div><div class="hof-desc">Aeronautics & Space Agency</div><div class="hof-date">Sep 2023</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card" href="https://www.dhs.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-shield-alt"></i></div><div class="hof-name">DHS</div><div class="hof-desc">Dept. of Homeland Security</div><div class="hof-date">Nov 2023</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card" href="https://www.epa.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-leaf"></i></div><div class="hof-name">EPA</div><div class="hof-desc">Environmental Protection Agency</div><div class="hof-date">Dec 2023</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card" href="https://www.fcc.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-broadcast-tower"></i></div><div class="hof-name">FCC</div><div class="hof-desc">Federal Communications Comm.</div><div class="hof-date">Mar 2025</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card" href="https://www.cms.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-heartbeat"></i></div><div class="hof-name">CMS</div><div class="hof-desc">Centers for Medicare & Medicaid</div><div class="hof-date">Mar 2025</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card" href="https://www.ncua.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-university"></i></div><div class="hof-name">NCUA</div><div class="hof-desc">National Credit Union Admin.</div><div class="hof-date">Jan 2025</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card" href="https://www.fdic.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-landmark"></i></div><div class="hof-name">FDIC</div><div class="hof-desc">Federal Deposit Insurance Corp.</div><div class="hof-date">Feb 2024</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card special" href="https://www.dnfsb.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-atom"></i></div><div class="hof-name">DNFSB</div><div class="hof-desc">Defense Nuclear Facilities Safety</div><div class="hof-date">Feb 2024</div><div class="hof-badge special-b">1st Arab ★</div></a>
+      <a class="hof-card" href="https://www.consumerfinance.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-balance-scale"></i></div><div class="hof-name">CFPB</div><div class="hof-desc">Consumer Financial Protection</div><div class="hof-date">Mar 2025</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card" href="https://www.bia.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-feather-alt"></i></div><div class="hof-name">BIA</div><div class="hof-desc">Bureau of Indian Affairs</div><div class="hof-date">Dec 2023</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card" href="https://www.bie.edu" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-graduation-cap"></i></div><div class="hof-name">BIE</div><div class="hof-desc">Bureau of Indian Education</div><div class="hof-date">Dec 2023</div><div class="hof-badge">Hall of Fame</div></a>
+      <a class="hof-card" href="https://www.ca.gov" target="_blank" rel="noopener"><div class="hof-icon gov"><i class="fas fa-map-marked-alt"></i></div><div class="hof-name">California</div><div class="hof-desc">State of California — SSI</div><div class="hof-date">Nov 2023</div><div class="hof-badge">Hall of Fame</div></a>
+    </div>
+
+    <div class="cat-label" style="margin-top:2.5rem"><i class="fas fa-building"></i> <span data-i18n="hof.cat2">Global Companies</span></div>
+    <div class="hof-grid">
+      <a class="hof-card" href="https://www.telefonica.com" target="_blank" rel="noopener"><div class="hof-icon co"><i class="fas fa-signal"></i></div><div class="hof-name">O2 Telefónica</div><div class="hof-desc">Germany — Telecom</div><div class="hof-date">Dec 2023</div><div class="hof-badge co-b">Bug Bounty</div></a>
+      <a class="hof-card" href="https://www.overstock.com" target="_blank" rel="noopener"><div class="hof-icon co"><i class="fas fa-home"></i></div><div class="hof-name">Bed Bath &amp; Beyond</div><div class="hof-desc">Overstock.com</div><div class="hof-date">Dec 2023</div><div class="hof-badge co-b">Bug Bounty</div></a>
+      <a class="hof-card" href="https://www.dickssportinggoods.com" target="_blank" rel="noopener"><div class="hof-icon co"><i class="fas fa-football-ball"></i></div><div class="hof-name">DICK'S Sporting</div><div class="hof-desc">US Sports Retailer</div><div class="hof-date">Jan 2025</div><div class="hof-badge co-b">Bug Bounty</div></a>
+      <a class="hof-card" href="https://www.shutterfly.com" target="_blank" rel="noopener"><div class="hof-icon co"><i class="fas fa-camera"></i></div><div class="hof-name">Shutterfly VDP</div><div class="hof-desc">HackerOne Platform</div><div class="hof-date">2022–2023</div><div class="hof-badge h1-b">HackerOne</div></a>
+      <a class="hof-card" href="https://www.td.com" target="_blank" rel="noopener"><div class="hof-icon co"><i class="fas fa-piggy-bank"></i></div><div class="hof-name">TD Bank Group</div><div class="hof-desc">Financial Institution</div><div class="hof-date">2022–2023</div><div class="hof-badge h1-b">HackerOne</div></a>
+      <a class="hof-card" href="https://www.servicenow.com" target="_blank" rel="noopener"><div class="hof-icon co"><i class="fas fa-cog"></i></div><div class="hof-name">ServiceNow</div><div class="hof-desc">Disclosure Program</div><div class="hof-date">2022–2023</div><div class="hof-badge h1-b">HackerOne</div></a>
+      <a class="hof-card" href="https://zeniqdmcc.com" target="_blank" rel="noopener"><div class="hof-icon co"><i class="fas fa-coins"></i></div><div class="hof-name">Zeniq DMCC</div><div class="hof-desc">Security Vulnerability</div><div class="hof-badge co-b">Disclosure</div></a>
+    </div>
+
+    <div class="cat-label" style="margin-top:2.5rem"><i class="fas fa-star-and-crescent"></i> <span data-i18n="hof.cat3">Iraqi Institutions</span></div>
+    <div class="hof-grid hof-grid-4">
+      <a class="hof-card" href="https://www.muc.edu.iq" target="_blank" rel="noopener"><div class="hof-icon iq"><i class="fas fa-university"></i></div><div class="hof-name">Al-Mansour University</div><div class="hof-desc">Website Vulnerability</div><div class="hof-date">Aug 2023</div><div class="hof-badge iq-b">Appreciation</div></a>
+      <a class="hof-card" href="https://library.alkafeel.net/dic" target="_blank" rel="noopener"><div class="hof-icon iq"><i class="fas fa-book-open"></i></div><div class="hof-name">Digital Info Center</div><div class="hof-desc">Al-Abbasi Holy Shrine</div><div class="hof-date">Oct 2023</div><div class="hof-badge iq-b">Appreciation</div></a>
+      <a class="hof-card" href="https://www.alkafeel.net" target="_blank" rel="noopener"><div class="hof-icon iq"><i class="fas fa-mosque"></i></div><div class="hof-name">Al-Abbasi Holy Shrine</div><div class="hof-desc">Cybersecurity Consulting</div><div class="hof-date">Jun 2025</div><div class="hof-badge iq-b">Appreciation</div></a>
+      <a class="hof-card" href="https://uomustansiriyah.edu.iq" target="_blank" rel="noopener"><div class="hof-icon iq"><i class="fas fa-school"></i></div><div class="hof-name">Al-Mustansiriya Univ.</div><div class="hof-desc">Scientific Consultation</div><div class="hof-date">Jul 2025</div><div class="hof-badge iq-b">Appreciation</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certs" class="sec">
+  <div class="wrap">
+    <div class="sec-head"><span class="g mono">// </span><span data-i18n="certs.head">Certifications</span><span class="g mono"> _</span></div>
+    <div class="certs-row">
+      <div class="cert-big">
+        <div class="cert-glow"></div>
+        <div class="cert-top">
+          <div class="cert-ico ejpt"><i class="fas fa-crosshairs"></i><span>eJPT</span></div>
+          <div class="cert-label-box">Certified</div>
+        </div>
+        <h3>Junior Penetration Tester</h3>
+        <p class="cert-org"><i class="fas fa-building"></i> INE Security</p>
+        <p class="cert-org"><i class="fas fa-calendar-alt"></i> July 2, 2025</p>
+        <p class="cert-org"><i class="fas fa-fingerprint"></i> ID: <span class="g mono">153981860</span></p>
+        <p class="cert-desc" data-i18n="certs.desc">Certified penetration tester covering Network Attacks, Web Application Attacks, Metasploit Framework, and Enumeration techniques.</p>
+        <div class="cert-chips"><span>Network Pentesting</span><span>Web App Attacks</span><span>Metasploit</span><span>Enumeration</span></div>
+        <div class="cert-img-preview" onclick="openLetter(4)">
+          <img src="images/ejpt.jpg" alt="eJPT Certificate"/>
+          <div class="cert-img-hint"><i class="fas fa-expand-alt"></i> Click to enlarge</div>
+        </div>
+      </div>
+      <div class="certs-small-col">
+        <div class="cert-sm">
+          <div class="cert-ico bc"><i class="fas fa-bug"></i></div>
+          <div><h4>Bug Bounty Hunter</h4><p><i class="fas fa-building"></i> Bugcrowd Platform</p><div class="cert-chips"><span>20+ Hall of Fame</span><span>VDP Programs</span></div></div>
+        </div>
+        <div class="cert-sm">
+          <div class="cert-ico h1c"><i class="fas fa-shield-virus"></i></div>
+          <div><h4>HackerOne Researcher</h4><p><i class="fas fa-building"></i> HackerOne Platform</p><div class="cert-chips"><span>TD Bank</span><span>Shutterfly</span><span>ServiceNow</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPRECIATION LETTERS -->
+<section id="letters" class="sec sec-dark">
+  <div class="wrap">
+    <div class="sec-head"><span class="g mono">// </span><span data-i18n="letters.head">Appreciation Letters</span><span class="g mono"> _</span></div>
+    <p class="sec-sub" data-i18n="letters.sub">Official letters from Iraqi institutions recognizing my cybersecurity contributions</p>
+    <div class="letters-grid">
+
+      <!-- Letter 1: Al-Mansour -->
+      <div class="letter">
+        <div class="letter-img-wrap" onclick="openLetter(0)">
+          <img src="images/letter1.jpg" alt="Al-Mansour University College" loading="lazy"/>
+          <div class="letter-img-overlay"><i class="fas fa-expand-alt"></i> View Letter</div>
+        </div>
+        <div class="letter-top">
+          <div class="l-seal" style="--lc:#00d4ff"><i class="fas fa-university"></i></div>
+          <div>
+            <div class="l-org" data-i18n="letter1.org">Al-Mansour University College</div>
+            <div class="l-meta"><span>No. 6336</span> · <span class="g">Aug 30, 2023</span></div>
+          </div>
+        </div>
+        <div class="l-subj" dir="rtl">م/ شكر وتقدير</div>
+        <p class="l-body" dir="rtl">تتمنى كلية المنصور الجامعية إبلاغكم عن الثغرة التقنية الموجودة في الموقع الإلكتروني، مع الشكر الجزيل على التميز والإبداع والسير على هذا النهج خدمة للمسيرة التعليمية لعراقنا الحبيب.</p>
+        <div class="l-sign" dir="rtl"><i class="fas fa-signature"></i> الدكتور صباح محجوب — العميد</div>
+      </div>
+
+      <!-- Letter 2: Digital Info Center -->
+      <div class="letter">
+        <div class="letter-img-wrap" onclick="openLetter(1)">
+          <img src="images/letter2.jpg" alt="Digital Information Center" loading="lazy"/>
+          <div class="letter-img-overlay"><i class="fas fa-expand-alt"></i> View Letter</div>
+        </div>
+        <div class="letter-top">
+          <div class="l-seal" style="--lc:#00ff88"><i class="fas fa-book-open"></i></div>
+          <div>
+            <div class="l-org" data-i18n="letter2.org">Digital Information Center</div>
+            <div class="l-meta" style="color:var(--txt2)">Al-Abbasi Holy Shrine · <span>No. 525</span> · <span class="g">Oct 24, 2023</span></div>
+          </div>
+        </div>
+        <div class="l-subj" dir="rtl">شكر وتقدير</div>
+        <p class="l-body" dir="rtl">يسر مركز المعلومات الرقمية أن يتقدم لكم بالشكر والتقدير للجهود المبذولة، سائلين الباري عز وجل أن يوفقكم لكل خير.</p>
+        <div class="l-sign" dir="rtl"><i class="fas fa-signature"></i> إدارة مركز المعلومات الرقمية</div>
+      </div>
+
+      <!-- Letter 3: Al-Abbasi -->
+      <div class="letter">
+        <div class="letter-img-wrap" onclick="openLetter(2)">
+          <img src="images/letter3.jpg" alt="Al-Abbasi Holy Shrine" loading="lazy"/>
+          <div class="letter-img-overlay"><i class="fas fa-expand-alt"></i> View Letter</div>
+        </div>
+        <div class="letter-top">
+          <div class="l-seal" style="--lc:#00ff88"><i class="fas fa-mosque"></i></div>
+          <div>
+            <div class="l-org" data-i18n="letter3.org">Al-Abbasi Holy Shrine</div>
+            <div class="l-meta"><span>No. 7761</span> · <span class="g">Jun 10, 2025</span></div>
+          </div>
+        </div>
+        <div class="l-subj" dir="rtl">م/ شكر وتقدير</div>
+        <p class="l-body" dir="rtl">نتقدم لكم بوافر الشكر والتقدير والامتنان لجهودكم الطيبة والمباركة نظير تعاونكم في مجال الأمن السيبراني مع العتبة العباسية المقدسة.</p>
+        <div class="l-sign" dir="rtl"><i class="fas fa-signature"></i> مصطفى مرتضى الصياء الدين — الأمين العام</div>
+      </div>
+
+      <!-- Letter 4: Al-Mustansiriya -->
+      <div class="letter">
+        <div class="letter-img-wrap" onclick="openLetter(3)">
+          <img src="images/letter4.jpg" alt="Al-Mustansiriya University" loading="lazy"/>
+          <div class="letter-img-overlay"><i class="fas fa-expand-alt"></i> View Letter</div>
+        </div>
+        <div class="letter-top">
+          <div class="l-seal" style="--lc:#f59e0b"><i class="fas fa-graduation-cap"></i></div>
+          <div>
+            <div class="l-org" data-i18n="letter4.org">Al-Mustansiriya University</div>
+            <div class="l-meta"><span>No. 301</span> · <span class="g">Jul 27, 2025</span></div>
+          </div>
+        </div>
+        <div class="l-subj" dir="rtl">م/ شكر وتقدير</div>
+        <p class="l-body" dir="rtl">يسرنا أن نقدم لكم شكرنا وتقديرنا إزاء ما تفضلتم به من تقديم استشارة علمية قيمة تمثل سخاءكم العلمي الكبير، جزاكم الله خيراً.</p>
+        <div class="l-sign" dir="rtl"><i class="fas fa-signature"></i> أ.د. صفاء نقي العيساوي — رئيس الجامعة</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACCOUNTS -->
+<section id="accounts" class="sec">
+  <div class="wrap">
+    <div class="sec-head"><span class="g mono">// </span><span data-i18n="accounts.head">My Accounts</span><span class="g mono"> _</span></div>
+    <div class="acc-grid">
+      <a class="acc-card" href="https://www.facebook.com/mohammed.faris.970569" target="_blank" rel="noopener"><div class="acc-icon" style="color:#1877f2"><i class="fab fa-facebook"></i></div><div class="acc-info"><div class="acc-name">Facebook</div><div class="acc-stat">Mohammed Faris</div></div><i class="fas fa-external-link-alt acc-arrow"></i></a>
+      <a class="acc-card" href="https://x.com/33aq3" target="_blank" rel="noopener"><div class="acc-icon" style="color:#e7e7e7"><i class="fab fa-x-twitter"></i></div><div class="acc-info"><div class="acc-name">X / Twitter</div><div class="acc-stat">@33aq3</div></div><i class="fas fa-external-link-alt acc-arrow"></i></a>
+      <a class="acc-card" href="https://www.instagram.com/d72w_" target="_blank" rel="noopener"><div class="acc-icon" style="color:#e1306c"><i class="fab fa-instagram"></i></div><div class="acc-info"><div class="acc-name">Instagram</div><div class="acc-stat">@d72w_</div></div><i class="fas fa-external-link-alt acc-arrow"></i></a>
+      <a class="acc-card" href="https://www.youtube.com/@7mh" target="_blank" rel="noopener"><div class="acc-icon" style="color:#ff0000"><i class="fab fa-youtube"></i></div><div class="acc-info"><div class="acc-name">YouTube</div><div class="acc-stat">@7mh</div></div><i class="fas fa-external-link-alt acc-arrow"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ARSENAL -->
+<section id="arsenal" class="sec sec-dark">
+  <div class="wrap">
+    <div class="sec-head"><span class="g mono">// </span><span data-i18n="arsenal.head">My Arsenal</span><span class="g mono"> _</span></div>
+    <p class="sec-sub" data-i18n="arsenal.sub">Hardware &amp; software setup used for security research and company testing</p>
+    <div class="arsenal-grid">
+
+      <div class="ars-card">
+        <div class="ars-icon" style="--ac:#00ff41"><i class="fas fa-laptop-code"></i></div>
+        <div class="ars-body">
+          <div class="ars-name" data-i18n="ars1.name">Primary Machine</div>
+          <div class="ars-spec" data-i18n="ars1.spec">Kali Linux · Custom Pentesting Build</div>
+          <p class="ars-desc">Dedicated security workstation running Kali Linux with a full suite of offensive tools, custom scripts, and isolated testing environments.</p>
+          <div class="ars-tags"><span>Kali Linux</span><span>Dual Boot</span><span>8GB RAM</span></div>
+        </div>
+      </div>
+
+      <div class="ars-card">
+        <div class="ars-icon" style="--ac:#00ffff"><i class="fas fa-network-wired"></i></div>
+        <div class="ars-body">
+          <div class="ars-name" data-i18n="ars2.name">Network Interceptor</div>
+          <div class="ars-spec" data-i18n="ars2.spec">WiFi Testing · Packet Analysis · MITM</div>
+          <p class="ars-desc">Dedicated wireless adapter for monitor mode and packet injection, used to test network security, intercept traffic, and simulate real-world attack vectors.</p>
+          <div class="ars-tags"><span>Alfa AWUS036</span><span>Wireshark</span><span>Aircrack-ng</span></div>
+        </div>
+      </div>
+
+      <div class="ars-card">
+        <div class="ars-icon" style="--ac:#8b5cf6"><i class="fas fa-spider"></i></div>
+        <div class="ars-body">
+          <div class="ars-name" data-i18n="ars3.name">Web Testing Suite</div>
+          <div class="ars-spec" data-i18n="ars3.spec">Burp Suite · Proxies · Fuzzing</div>
+          <p class="ars-desc">Complete web application attack toolkit — intercepting proxies, automated scanners, custom payloads, and browser extensions for deep manual testing.</p>
+          <div class="ars-tags"><span>Burp Suite</span><span>Nuclei</span><span>SQLMap</span><span>ffuf</span></div>
+        </div>
+      </div>
+
+      <div class="ars-card">
+        <div class="ars-icon" style="--ac:#f59e0b"><i class="fas fa-search-location"></i></div>
+        <div class="ars-body">
+          <div class="ars-name" data-i18n="ars4.name">Recon Platform</div>
+          <div class="ars-spec" data-i18n="ars4.spec">OSINT · Footprinting · Intelligence</div>
+          <p class="ars-desc">Automated reconnaissance pipeline combining Shodan, theHarvester, Amass, and custom Python scripts to map attack surfaces before any engagement.</p>
+          <div class="ars-tags"><span>Shodan</span><span>Amass</span><span>theHarvester</span><span>Python</span></div>
+        </div>
+      </div>
+
+      <div class="ars-card">
+        <div class="ars-icon" style="--ac:#00ff41"><i class="fas fa-server"></i></div>
+        <div class="ars-body">
+          <div class="ars-name" data-i18n="ars5.name">Virtual Lab</div>
+          <div class="ars-spec" data-i18n="ars5.spec">Isolated Environments · Safe Testing</div>
+          <p class="ars-desc">Multiple isolated VMs for malware analysis, exploit development, and simulating corporate network topologies without risk to live systems.</p>
+          <div class="ars-tags"><span>VMware</span><span>VirtualBox</span><span>Docker</span></div>
+        </div>
+      </div>
+
+      <div class="ars-card">
+        <div class="ars-icon" style="--ac:#00ffff"><i class="fas fa-cloud"></i></div>
+        <div class="ars-body">
+          <div class="ars-name" data-i18n="ars6.name">Cloud Infrastructure</div>
+          <div class="ars-spec" data-i18n="ars6.spec">VPS · Remote Testing · Payload Hosting</div>
+          <p class="ars-desc">Remote cloud instances used as redirectors, out-of-band testing servers, and infrastructure for large-scale bug bounty reconnaissance.</p>
+          <div class="ars-tags"><span>VPS</span><span>Ngrok</span><span>Interactsh</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COLLABORATION -->
+<section id="collaborate" class="sec">
+  <div class="wrap">
+    <div class="sec-head"><span class="g mono">// </span><span data-i18n="collab.head">Let's Collaborate</span><span class="g mono"> _</span></div>
+    <p class="sec-sub" data-i18n="collab.sub">Available for security engagements, consultations, and responsible disclosure partnerships</p>
+    <div class="collab-grid">
+
+      <div class="collab-card">
+        <div class="collab-top">
+          <div class="collab-ico" style="--cc:#00ff41"><i class="fas fa-bug"></i></div>
+          <div class="collab-badge" data-i18n="collab.popular">Most Popular</div>
+        </div>
+        <h3 class="collab-title" data-i18n="collab1.title">Bug Bounty Hunting</h3>
+        <p class="collab-desc">I actively hunt vulnerabilities across public and private bug bounty programs. Companies can also invite me directly for responsible disclosure on their platforms.</p>
+        <ul class="collab-list">
+          <li><i class="fas fa-check"></i> Web &amp; API vulnerability discovery</li>
+          <li><i class="fas fa-check"></i> Responsible disclosure reports</li>
+          <li><i class="fas fa-check"></i> Bugcrowd &amp; HackerOne platforms</li>
+          <li><i class="fas fa-check"></i> Full PoC documentation</li>
+        </ul>
+        <a href="#contact" class="collab-btn">Get Started</a>
+      </div>
+
+      <div class="collab-card">
+        <div class="collab-top">
+          <div class="collab-ico" style="--cc:#00ffff"><i class="fas fa-crosshairs"></i></div>
+        </div>
+        <h3 class="collab-title" data-i18n="collab2.title">Penetration Testing</h3>
+        <p class="collab-desc">Authorized black-box, grey-box, or white-box penetration testing for companies who want to know their real security posture before attackers do.</p>
+        <ul class="collab-list">
+          <li><i class="fas fa-check"></i> Web application pentesting</li>
+          <li><i class="fas fa-check"></i> Network &amp; infrastructure testing</li>
+          <li><i class="fas fa-check"></i> Detailed remediation report</li>
+          <li><i class="fas fa-check"></i> Re-test after fixes</li>
+        </ul>
+        <a href="#contact" class="collab-btn">Get Started</a>
+      </div>
+
+      <div class="collab-card">
+        <div class="collab-top">
+          <div class="collab-ico" style="--cc:#8b5cf6"><i class="fas fa-shield-alt"></i></div>
+        </div>
+        <h3 class="collab-title" data-i18n="collab3.title">Security Consultation</h3>
+        <p class="collab-desc">Strategic security advisory for businesses — reviewing architecture, identifying weak points, and building a security roadmap tailored to your organization.</p>
+        <ul class="collab-list">
+          <li><i class="fas fa-check"></i> Security architecture review</li>
+          <li><i class="fas fa-check"></i> Risk assessment &amp; prioritization</li>
+          <li><i class="fas fa-check"></i> Security policy guidance</li>
+          <li><i class="fas fa-check"></i> On-demand advisory sessions</li>
+        </ul>
+        <a href="#contact" class="collab-btn">Get Started</a>
+      </div>
+
+      <div class="collab-card">
+        <div class="collab-top">
+          <div class="collab-ico" style="--cc:#f59e0b"><i class="fas fa-chalkboard-teacher"></i></div>
+        </div>
+        <h3 class="collab-title" data-i18n="collab4.title">Security Training</h3>
+        <p class="collab-desc">Practical cybersecurity workshops for development teams, IT staff, and organizations — covering real attack techniques and how to defend against them.</p>
+        <ul class="collab-list">
+          <li><i class="fas fa-check"></i> Developer security awareness</li>
+          <li><i class="fas fa-check"></i> Hands-on attack &amp; defense labs</li>
+          <li><i class="fas fa-check"></i> OWASP Top 10 deep dives</li>
+          <li><i class="fas fa-check"></i> Custom curriculum per team</li>
+        </ul>
+        <a href="#contact" class="collab-btn">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec sec-dark">
+  <div class="wrap">
+    <div class="sec-head"><span class="g mono">// </span><span data-i18n="contact.head">Get In Touch</span><span class="g mono"> _</span></div>
+    <div class="contact-grid">
+      <div class="terminal-card">
+        <div class="tc-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g2"></span><span class="tc-title">contact.sh</span></div>
+        <div class="tc-body">
+          <p><span class="g">$</span> cat /etc/contact</p>
+          <p><span class="g">→</span> email: <span class="hl">[ private ]</span></p>
+          <p><span class="g">→</span> location: <span class="hl">Baghdad, Iraq</span></p>
+          <p><span class="g">→</span> response: <span class="hl">&lt; 24h</span></p>
+          <p><span class="g">$</span> cat /etc/services</p>
+          <p><span class="g">→</span> <span class="hl">Penetration Testing</span></p>
+          <p><span class="g">→</span> <span class="hl">Security Consulting</span></p>
+          <p><span class="g">→</span> <span class="hl">Bug Bounty Programs</span></p>
+          <p><span class="g">→</span> <span class="hl">Security Training</span></p>
+          <p><span class="g">$</span> <span class="blink">█</span></p>
+        </div>
+      </div>
+      <form id="cForm" class="contact-form" onsubmit="return sendMsg(event)">
+        <div class="fg"><label data-i18n="form.name">Full Name</label><input type="text" name="name" data-i18n-ph="form.namePh" placeholder="Your full name" required/></div>
+        <div class="fg"><label data-i18n="form.email">Email Address</label><input type="email" name="email" placeholder="your@email.com" required/></div>
+        <div class="fg"><label data-i18n="form.subject">Subject</label><select name="subject" required><option value="" disabled selected>Select a subject</option><option>Website Penetration Testing</option><option>Security Consulting</option><option>Bug Bounty Collaboration</option><option>Security Training</option><option>Other</option></select></div>
+        <div class="fg"><label data-i18n="form.msg">Message</label><textarea name="message" rows="5" data-i18n-ph="form.msgPh" placeholder="Write your message here..." required></textarea></div>
+        <button type="submit" id="cBtn" class="btn-g" style="width:100%;justify-content:center;border:none;cursor:pointer"><i class="fas fa-paper-plane"></i> <span data-i18n="form.send">Send Message</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><span class="g">&gt;</span> Mohammed Faris</div>
+        <p class="foot-sub" data-i18n="foot.name">Mohammed Faris Musa Al-Hadhrawi</p>
+        <p class="foot-sub" style="color:#1a3a22">Bug Bounty Hunter · eJPT · Cybersecurity Researcher</p>
+      </div>
+      <div class="foot-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#achievements">Hall of Fame</a>
+        <a href="#certs">Certifications</a>
+        <a href="#letters">Letters</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-platforms">
+        <a href="https://bugcrowd.com/xploitmohamed0x" target="_blank" rel="noopener"><i class="fas fa-bug"></i> Bugcrowd</a>
+        <a href="https://hackerone.com/xploitmohamed0x" target="_blank" rel="noopener"><i class="fas fa-shield-virus"></i> HackerOne</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span id="footYear"></span> Mohammed Faris Al-Hadhrawi — All rights reserved</p>
+      <p class="foot-quote">"The quieter you become, the more you are able to hear." — Kali Linux</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#hero" id="toTop"><i class="fas fa-chevron-up"></i></a>
+<button id="langBtn" class="lang-btn" onclick="toggleLang()">
+  <i class="fas fa-globe"></i><span id="langLabel">AR</span>
+</button>
+<div id="toast"></div>
+
+<!-- LIGHTBOX for letters & eJPT cert -->
+<div id="letterLB">
+  <button class="lb-btn lb-close" onclick="closeLetter()"><i class="fas fa-times"></i></button>
+  <button class="lb-btn lb-prev" id="lbPrev" onclick="moveLetter(-1)"><i class="fas fa-chevron-left"></i></button>
+  <img id="lbImg" src="" alt=""/>
+  <button class="lb-btn lb-next" id="lbNext" onclick="moveLetter(1)"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<script>
+const letterImgs = [
+  { src:'images/letter1.jpg', alt:'Al-Mansour University College' },
+  { src:'images/letter2.jpg', alt:'Digital Information Center' },
+  { src:'images/letter3.jpg', alt:'Al-Abbasi Holy Shrine' },
+  { src:'images/letter4.jpg', alt:'Al-Mustansiriya University' },
+  { src:'images/ejpt.jpg',    alt:'eJPT Certificate — INE Security' }
+];
+let lbIdx = 0;
+
+function openLetter(idx){
+  lbIdx = idx;
+  const lb = document.getElementById('letterLB');
+  document.getElementById('lbImg').src  = letterImgs[idx].src;
+  document.getElementById('lbImg').alt  = letterImgs[idx].alt;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lbPrev').style.opacity = idx === 0 ? '.3' : '1';
+  document.getElementById('lbNext').style.opacity = idx === letterImgs.length-1 ? '.3' : '1';
+}
+function closeLetter(){
+  document.getElementById('letterLB').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function moveLetter(dir){
+  const next = lbIdx + dir;
+  if(next >= 0 && next < letterImgs.length) openLetter(next);
+}
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('letterLB');
+  if(!lb.classList.contains('open')) return;
+  if(e.key === 'Escape') closeLetter();
+  if(e.key === 'ArrowLeft')  moveLetter(-1);
+  if(e.key === 'ArrowRight') moveLetter(1);
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

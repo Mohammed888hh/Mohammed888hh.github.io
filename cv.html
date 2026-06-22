@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>السيرة الذاتية — محمد فارس الحدراوي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --green: #00b368;
+      --dark:  #0f1923;
+      --gray:  #4a5568;
+      --light: #f7fafc;
+      --txt:   #1a202c;
+      --border:#e2e8f0;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:'Cairo',sans-serif; background:#e8ecf0;
+      color:var(--txt); direction:rtl; padding:2rem 1rem;
+      font-size:14px; line-height:1.6;
+    }
+
+    .cv-wrapper {
+      max-width:860px; margin:0 auto; background:#fff;
+      box-shadow:0 4px 30px rgba(0,0,0,.15);
+    }
+
+    /* ---- HEADER ---- */
+    .cv-header {
+      background:var(--dark); color:#fff; padding:2.5rem;
+      display:flex; gap:2rem; align-items:center;
+    }
+    .cv-avatar {
+      width:110px; height:110px; border-radius:50%; flex-shrink:0;
+      border:3px solid var(--green); overflow:hidden; background:#1e2a3a;
+      display:flex; align-items:center; justify-content:center;
+      font-size:2rem; font-weight:900; color:var(--green); font-family:'Fira Code',monospace;
+    }
+    .cv-avatar img { width:100%; height:100%; object-fit:cover; }
+    .cv-name h1 { font-size:1.7rem; font-weight:900; margin-bottom:.2rem; }
+    .cv-name h2 { font-size:1rem; color:var(--green); font-weight:600; margin-bottom:.8rem; }
+    .cv-contact { display:flex; flex-wrap:wrap; gap:.5rem 1.5rem; font-size:.8rem; color:#94a3b8; }
+    .cv-contact span { display:flex; align-items:center; gap:.35rem; }
+    .cv-contact i { color:var(--green); }
+
+    /* ---- BODY ---- */
+    .cv-body { display:grid; grid-template-columns:1fr 2fr; }
+
+    /* SIDEBAR */
+    .cv-sidebar { background:#f8fafc; padding:1.8rem; border-left:1px solid var(--border); }
+    .cv-section { margin-bottom:1.8rem; }
+    .cv-section:last-child { margin-bottom:0; }
+    .cv-section-title {
+      font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:1px;
+      color:var(--green); margin-bottom:.9rem; padding-bottom:.4rem;
+      border-bottom:2px solid var(--green); display:flex; align-items:center; gap:.4rem;
+    }
+
+    /* Skills */
+    .skill-item { margin-bottom:.7rem; }
+    .skill-name { font-size:.8rem; color:var(--txt); margin-bottom:.25rem; display:flex; justify-content:space-between; }
+    .skill-name span:last-child { color:var(--green); font-weight:700; font-family:'Fira Code',monospace; font-size:.7rem; }
+    .skill-bar { height:5px; background:var(--border); border-radius:3px; }
+    .skill-bar-fill { height:100%; background:linear-gradient(90deg,var(--green),#00d4ff); border-radius:3px; }
+
+    /* Tags */
+    .tags { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .tag {
+      font-size:.72rem; padding:.2rem .6rem; background:#e8f5ee; color:var(--green);
+      border:1px solid #c6e8d6; border-radius:4px; font-family:'Fira Code',monospace;
+    }
+
+    /* Platform cards */
+    .platform-card {
+      background:#fff; border:1px solid var(--border); border-radius:6px;
+      padding:.7rem; margin-bottom:.6rem; font-size:.78rem;
+    }
+    .platform-card strong { color:var(--dark); display:block; margin-bottom:.1rem; }
+    .platform-card span { color:var(--gray); }
+    .platform-card .handle { color:var(--green); font-family:'Fira Code',monospace; font-size:.72rem; }
+
+    /* MAIN */
+    .cv-main { padding:1.8rem; }
+
+    /* Section */
+    .main-section { margin-bottom:1.8rem; }
+    .main-section:last-child { margin-bottom:0; }
+    .main-title {
+      font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:1px;
+      color:var(--dark); margin-bottom:1rem; padding-bottom:.4rem;
+      border-bottom:2px solid var(--dark); display:flex; align-items:center; gap:.4rem;
+    }
+    .main-title i { color:var(--green); }
+
+    /* Summary */
+    .summary-text { font-size:.85rem; color:var(--gray); line-height:1.8; }
+    .summary-text strong { color:var(--dark); }
+
+    /* Experience item */
+    .exp-item { margin-bottom:1.2rem; padding-bottom:1.2rem; border-bottom:1px dashed var(--border); }
+    .exp-item:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+    .exp-header { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:.3rem; margin-bottom:.4rem; }
+    .exp-title { font-size:.9rem; font-weight:700; color:var(--dark); }
+    .exp-org   { font-size:.78rem; color:var(--green); font-weight:600; }
+    .exp-date  { font-size:.72rem; color:var(--gray); background:var(--light); padding:.15rem .6rem; border-radius:12px; font-family:'Fira Code',monospace; }
+    .exp-desc  { font-size:.8rem; color:var(--gray); margin-top:.3rem; }
+    .exp-desc li { margin-bottom:.2rem; padding-right:1rem; position:relative; }
+    .exp-desc li::before { content:'›'; position:absolute; right:0; color:var(--green); font-weight:700; }
+
+    /* Hall of Fame grid */
+    .hof-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.5rem; }
+    .hof-item {
+      background:var(--light); border:1px solid var(--border); border-radius:5px;
+      padding:.5rem .7rem; font-size:.72rem; text-align:center; color:var(--gray);
+    }
+    .hof-item strong { display:block; color:var(--dark); font-size:.78rem; margin-bottom:.1rem; }
+
+    /* Cert */
+    .cert-item {
+      display:flex; gap:.8rem; align-items:flex-start;
+      background:var(--light); border:1px solid var(--border); border-radius:6px;
+      padding:.8rem; margin-bottom:.7rem;
+    }
+    .cert-item:last-child { margin-bottom:0; }
+    .cert-icon {
+      width:38px; height:38px; border-radius:8px; background:var(--green);
+      display:flex; align-items:center; justify-content:center; color:#fff;
+      font-size:1rem; flex-shrink:0;
+    }
+    .cert-detail h4 { font-size:.85rem; font-weight:700; color:var(--dark); }
+    .cert-detail p  { font-size:.75rem; color:var(--gray); }
+    .cert-detail .cert-id { font-family:'Fira Code',monospace; color:var(--green); font-size:.72rem; }
+
+    /* ---- PRINT BUTTON ---- */
+    .print-bar {
+      background:var(--dark); color:#fff; padding:1rem 2rem;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .print-bar p { font-size:.83rem; color:#94a3b8; }
+    .print-btn {
+      background:var(--green); color:#fff; border:none; padding:.6rem 1.4rem;
+      border-radius:6px; font-family:'Cairo',sans-serif; font-size:.88rem;
+      font-weight:700; cursor:pointer; display:flex; align-items:center; gap:.5rem;
+      transition:.2s;
+    }
+    .print-btn:hover { background:#00996a; }
+
+    /* ---- FOOTER ---- */
+    .cv-footer {
+      background:#f8fafc; border-top:2px solid var(--green);
+      padding:1rem 2.5rem; text-align:center;
+      font-size:.75rem; color:var(--gray);
+    }
+
+    @media print {
+      body { background:#fff; padding:0; }
+      .print-bar { display:none !important; }
+      .cv-wrapper { box-shadow:none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PRINT BAR -->
+<div class="print-bar">
+  <p>السيرة الذاتية — محمد فارس موسى الحدراوي</p>
+  <button class="print-btn" onclick="window.print()">
+    <i class="fas fa-print"></i> طباعة / حفظ PDF
+  </button>
+</div>
+
+<div class="cv-wrapper">
+
+  <!-- HEADER -->
+  <div class="cv-header">
+    <div class="cv-avatar">
+      <img src="images/profile.jpg" alt="محمد فارس"
+           onerror="this.style.display='none';this.parentElement.textContent='MF'" />
+    </div>
+    <div class="cv-name">
+      <h1>محمد فارس موسى الحدراوي</h1>
+      <h2><i class="fas fa-shield-alt"></i> باحث في الأمن السيبراني | Bug Bounty Hunter | eJPT</h2>
+      <div class="cv-contact">
+        <span><i class="fas fa-envelope"></i> [ private ]</span>
+        <span><i class="fas fa-map-marker-alt"></i> النجف، العراق</span>
+        <span><i class="fas fa-bug"></i> Bugcrowd Profile</span>
+        <span><i class="fas fa-shield-virus"></i> HackerOne Profile</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-body">
+
+    <!-- SIDEBAR -->
+    <div class="cv-sidebar">
+
+      <div class="cv-section">
+        <div class="cv-section-title"><i class="fas fa-code"></i> المهارات</div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Web App Pentesting</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Bug Bounty Hunting</span><span>88%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>SQL Injection</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>XSS / SSRF / CSRF</span><span>82%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Server-Side Injection</span><span>80%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Network Pentesting</span><span>75%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title"><i class="fas fa-tools"></i> الأدوات</div>
+        <div class="tags">
+          <span class="tag">Burp Suite</span>
+          <span class="tag">Kali Linux</span>
+          <span class="tag">Nmap</span>
+          <span class="tag">Metasploit</span>
+          <span class="tag">SQLMap</span>
+          <span class="tag">Nuclei</span>
+          <span class="tag">Python</span>
+          <span class="tag">Nikto</span>
+          <span class="tag">OSINT</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title"><i class="fas fa-globe"></i> المنصات</div>
+        <div class="platform-card">
+          <strong><i class="fas fa-bug"></i> Bugcrowd</strong>
+          
+          <span>20+ Hall of Fame</span>
+        </div>
+        <div class="platform-card">
+          <strong><i class="fas fa-shield-virus"></i> HackerOne</strong>
+          
+          <span>TD Bank · Shutterfly · ServiceNow</span>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title"><i class="fas fa-language"></i> اللغات</div>
+        <div class="skill-item">
+          <div class="skill-name"><span>العربية</span><span>أصلية</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:100%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>الإنجليزية</span><span>جيدة</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="cv-main">
+
+      <div class="main-section">
+        <div class="main-title"><i class="fas fa-user"></i> نبذة مختصرة</div>
+        <p class="summary-text">
+          باحث في الأمن السيبراني متخصص في <strong>اختبار الاختراق وأمن تطبيقات الويب</strong>، مع خبرة عملية واسعة
+          في برامج Bug Bounty على منصتي Bugcrowd وHackerOne. حصلت على اعتراف رسمي بشكل Hall of Fame
+          من أكثر من <strong>20 مؤسسة عالمية</strong> تشمل وكالات حكومية أمريكية كبرى مثل NASA وDHS وFCC،
+          إضافة إلى مؤسسات عراقية أكاديمية ودينية. حاصل على شهادة <strong>eJPT</strong> المعتمدة من INE Security.
+        </p>
+      </div>
+
+      <div class="main-section">
+        <div class="main-title"><i class="fas fa-certificate"></i> الشهادات والاعتمادات</div>
+        <div class="cert-item">
+          <div class="cert-icon"><i class="fas fa-crosshairs"></i></div>
+          <div class="cert-detail">
+            <h4>eJPT — Junior Penetration Tester</h4>
+            <p>INE Security &nbsp;|&nbsp; <span style="color:#00b368">2 يوليو 2025</span></p>
+            <p class="cert-id">Certification ID: 153981860</p>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon" style="background:#f59e0b"><i class="fas fa-bug"></i></div>
+          <div class="cert-detail">
+            <h4>Bug Bounty Hunter — Bugcrowd</h4>
+            <p>خبرة موثقة في برامج VDP | 20+ Hall of Fame</p>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon" style="background:#8b5cf6"><i class="fas fa-shield-virus"></i></div>
+          <div class="cert-detail">
+            <h4>Security Researcher — HackerOne</h4>
+            <p>TD Bank Group · Shutterfly VDP · ServiceNow Disclosure</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <div class="main-title"><i class="fas fa-trophy"></i> أبرز الإنجازات (Hall of Fame)</div>
+        <div class="hof-grid">
+          <div class="hof-item"><strong>NASA</strong>سبتمبر 2023</div>
+          <div class="hof-item"><strong>DHS</strong>نوفمبر 2023</div>
+          <div class="hof-item"><strong>EPA</strong>ديسمبر 2023</div>
+          <div class="hof-item"><strong>FCC</strong>مارس 2025</div>
+          <div class="hof-item"><strong>CMS</strong>مارس 2025</div>
+          <div class="hof-item"><strong>NCUA</strong>يناير 2025</div>
+          <div class="hof-item"><strong>FDIC</strong>فبراير 2024</div>
+          <div class="hof-item" style="border-color:#00b368;background:#e8f5ee"><strong style="color:#00b368">DNFSB ★</strong>أول عربي — فبراير 2024</div>
+          <div class="hof-item"><strong>CFPB</strong>مارس 2025</div>
+          <div class="hof-item"><strong>BIA</strong>ديسمبر 2023</div>
+          <div class="hof-item"><strong>BIE</strong>ديسمبر 2023</div>
+          <div class="hof-item"><strong>California</strong>نوفمبر 2023</div>
+          <div class="hof-item"><strong>O2 Telefónica</strong>ديسمبر 2023</div>
+          <div class="hof-item"><strong>DICK'S Sports</strong>يناير 2025</div>
+          <div class="hof-item"><strong>TD Bank</strong>HackerOne</div>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <div class="main-title"><i class="fas fa-star"></i> التكريمات العراقية</div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <div><div class="exp-title">كلية المنصور الجامعية</div><div class="exp-org">شكر وتقدير رسمي — العدد: 6336</div></div>
+            <div class="exp-date">30 / 8 / 2023</div>
+          </div>
+          <ul class="exp-desc"><li>اكتشاف ثغرة تقنية في الموقع الإلكتروني للكلية والإبلاغ عنها بشكل مسؤول</li></ul>
+        </div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <div><div class="exp-title">العتبة العباسية المقدسة</div><div class="exp-org">شكر وتقدير — العدد: 7761</div></div>
+            <div class="exp-date">10 / 6 / 2025</div>
+          </div>
+          <ul class="exp-desc"><li>التعاون مع قسم الإعلام في مجال الأمن السيبراني وحماية المنظومة الرقمية</li></ul>
+        </div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <div><div class="exp-title">جامعة المستنصرية</div><div class="exp-org">شكر وتقدير — العدد: 301 | رئاسة الجامعة</div></div>
+            <div class="exp-date">27 / 7 / 2025</div>
+          </div>
+          <ul class="exp-desc"><li>تقديم استشارة علمية قيمة في مجال الأمن السيبراني</li></ul>
+        </div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <div><div class="exp-title">مركز المعلومات الرقمية</div><div class="exp-org">شكر وتقدير — العدد: 525</div></div>
+            <div class="exp-date">24 / 10 / 2023</div>
+          </div>
+          <ul class="exp-desc"><li>جهود متميزة في مجال أمن المعلومات والحماية الرقمية</li></ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="cv-footer">
+    <p>محمد فارس موسى الحدراوي &nbsp;|&nbsp; Bug Bounty Hunter &nbsp;|&nbsp; النجف، العراق</p>
+  </div>
+
+</div>
+</body>
+</html>
